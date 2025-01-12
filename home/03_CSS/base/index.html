@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+  
+    .week1{
+        width: 100px;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .week1 > div{
+        background-color: rgb(180, 176, 176);
+        border: solid black 1px;
+        border-radius: 5px;
+        position: relative;
+        color: rgb(66, 65, 65);
+        height: 20px;    
+               
+    }
+    .week2{
+        width: 150px;
+        display: none;
+    }
+    .week2 > div{
+        background-color: rgb(180, 176, 176);
+        border: solid black 1px;
+        cursor: pointer;
+        border-radius: 5px;
+        height: 20px;
+        
+    }
+    .week1 > div:hover div.week2{
+        display: inline-block;
+        position: absolute;
+        left: 80%;
+        top: 90%;
+        z-index: 1;
+    }
+    @media all and (max-width: 384px){
+        .week1{
+            width: 100px;
+            display: flex;
+            flex-flow: column nowrap;
+        }
+    }
+
+</style>
+
+</head>
+<body>
+   
+<div class="week1">  
+    <div>Понедельник</div>
+    <div>Вторник</div>
+    <div>Среда
+        <div class="week2">
+            <div>Завтрак</div>
+            <div>Обед</div>
+            <div>Ужин</div>
+        </div>
+    </div>
+    <div>Четверг</div>
+    <div>Пятница</div>
+    <div>Суббота</div>
+
+</div> 
+
+</body>
+</html>
